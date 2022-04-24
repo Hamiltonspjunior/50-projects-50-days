@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 10px;
+}
+
+body {
+	background-color: #333;
+	font-family: 'Lato', sans-serif;
+	font-size: clamp(1.8rem, 1vw + 1rem, 2rem);
+	line-height: 1.5;
+	height: 100vh;
+	overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+	line-height: 1;
+}
+
+img {
+	max-width: 100%;
+	display: block;
+}
+
+button,
+a {
+	color: inherit;
+}
+
+.container {
+	background-color: #fff;
+	min-height: 100vh;
+	transition: transform 0.4s linear;
+	transform-origin: top left;
+}
+
+.container.show-nav {
+	transform: rotate(-20deg);
+}
+
+.content {
+	margin: 0 auto;
+	padding: 10rem 0 max(5%, 3rem);
+	width: min(85%, 1200px);
+}
+
+.content * + * {
+	margin-top: var(--spacer, 1em);
+}
+
+.article-author {
+	font-style: italic;
+}
+
+.nav-controls-container {
+	left: -100px;
+	position: fixed;
+	top: -100px;
+}
+
+.nav-controls {
+	background-color: #fa7979;
+	border-radius: 50%;
+	height: 200px;
+	position: relative;
+	width: 200px;
+	transition: transform 0.4s linear;
+}
+
+.container.show-nav .nav-controls {
+	transform: rotate(-70deg);
+}
+
+.nav-controls__button {
+	background-color: transparent;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 3rem;
+	position: absolute;
+}
+
+.nav-controls__button--open {
+	left: 65%;
+	top: 65%;
+}
+
+.nav-controls__button--close {
+	left: 23%;
+	top: 62%;
+}
+
+.nav {
+	bottom: 8rem;
+	display: flex;
+	flex-direction: column;
+	left: 3rem;
+	position: fixed;
+}
+
+.nav__link {
+	color: #fff;
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	transform: translateX(-100%);
+	transition: transform 0.4s linear, opacity 0.3s;
+	opacity: 0;
+}
+
+.nav__link + .nav__link {
+	margin-top: 1.5em;
+	margin-left: 15px;
+	transform: translateX(-150%);
+}
+
+.nav__link + .nav__link + .nav__link {
+	margin-left: 30px;
+	transform: translateX(-200%);
+}
+
+.nav__link .fas {
+	margin-right: 1rem;
+}
+
+.container.show-nav + .nav .nav__link {
+	transform: translateX(0);
+	transition-delay: 0.3s;
+	opacity: 1;
+}
