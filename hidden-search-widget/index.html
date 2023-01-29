@@ -9,22 +9,16 @@
     integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
-  <title>Progress Steps</title>
+  <title>Hidden Search Widget</title>
 </head>
 
 <body>
-  <div class="container">
-    <div class="progress-container">
-      <div class="progress js-progress"></div>
-      <div class="step is-active js-step">1</div>
-      <div class="step js-step">2</div>
-      <div class="step js-step">3</div>
-      <div class="step js-step">4</div>      
-    </div>
-
-    <button class="btn js-prev" disabled>Prev</button>
-    <button class="btn js-next">Next</button>
-  </div>
+  <form action="" class="search-widget">
+    <input class="search-widget__input" type="search" name="search" placeholder="Search...">
+    <button class="search-widget__button">
+      <i class="fa-sharp fa-solid fa-magnifying-glass"></i>
+    </button>
+  </form>
 
   <script src="script.js"></script>
 </body>
