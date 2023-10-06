@@ -1,0 +1,11 @@
+{
+  "files.autoSave": "afterDelay",
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.wordWrap": "on",
+  "editor.fontFamily": "'Fira Code'",
+  "editor.fontSize": 17,
+  "editor.defaultFormatter": "esbenp.prettier-vscode"
+}

@@ -9,20 +9,8 @@ const handleButtons = () => {
 	const isTheFirstStep = currentStep === 1
 	const isLastStep = currentStep === steps.length
 
-	if (isTheFirstStep) {
-		prev.disabled = true
-		next.disabled = false
-		return
-	}
-
-	if (isLastStep) {
-		next.disabled = true
-		prev.disabled = false
-		return
-	}
-	
-	prev.disabled = false
-	next.disabled = false
+	prev.disabled = isTheFirstStep
+	next.disabled = isLastStep
 }
 
 const update = stepIndex => {
@@ -31,7 +19,7 @@ const update = stepIndex => {
 	steps[stepIndex].classList.toggle('is-active')
 	progress.style.width = `${progressPercentage}%`
 
-	handleButtons()
+	handleButtons()\
 }
 
 prev.addEventListener('click', () => {

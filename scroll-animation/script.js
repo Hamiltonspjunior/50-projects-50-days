@@ -1,6 +1,6 @@
 const boxes = document.querySelectorAll('.box')
 
-const checkBoxDistanceFromTop = () => {
+const checkBoxesDistanceFromTop = () => {
   const triggerBottom = window.innerHeight - 200
 
   for (box of boxes) {
@@ -13,6 +13,6 @@ const checkBoxDistanceFromTop = () => {
     }
   }
 }
-checkBoxDistanceFromTop()
+checkBoxesDistanceFromTop()
 
-window.addEventListener('scroll', checkBoxDistanceFromTop)
+window.addEventListener('scroll', checkBoxesDistanceFromTop)
