@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 * {
 	box-sizing: border-box;
@@ -89,22 +100,20 @@ h2 {
 	.split-column {
 		transition: width 1s ease-in-out;
 	}
-	
-	/* Hover Efect */
-	.split-columns:has(.split-column.--left:hover) .split-column.--left {
-		width: 80%;
-	}
-	.split-columns:has(.split-column.--left:hover) .split-column.--right {
-		width: 20%;
-	}
 
-	.split-columns:has(.split-column.--right:hover) .split-column.--right {
-		width: 80%;
-	}
-	.split-columns:has(.split-column.--right:hover) .split-column.--left {
-		width: 20%;
-	}
-	/* /Hover Efect */
+  .split-columns.hover-left .--left {
+    width: 80%;
+  }
+  .split-columns.hover-left .--right {
+    width: 20%;
+  }
+  
+  .split-columns.hover-right .--right {
+    width: 80%;
+  }
+  .split-columns.hover-right .--left {
+    width: 20%;
+  }
 }
 
 @media (width < 480px) {
@@ -117,19 +126,41 @@ h2 {
 		transition: height 1s ease-in-out;
 	}
 
-	/* Hover Efect */
-	.split-columns:has(.split-column.--left:hover) .split-column.--left {
-		height: 80%;
-	}
-	.split-columns:has(.split-column.--left:hover) .split-column.--right {
-		height: 20%;
-	}
-
-	.split-columns:has(.split-column.--right:hover) .split-column.--right {
-		height: 80%;
-	}
-	.split-columns:has(.split-column.--right:hover) .split-column.--left {
-		height: 20%;
-	}
-	/* /Hover Efect */
+  .split-columns.hover-left .--left {
+    height: 80%;
+  }
+  .split-columns.hover-left .--right {
+    height: 20%;
+  }
+  
+  .split-columns.hover-right .--right {
+    height: 80%;
+  }
+  .split-columns.hover-right .--left {
+    height: 20%;
+  }
 }
+  </style>
+  <title>Split Landing Page</title>
+</head>
+
+<body>
+  <div class="split-columns" data-js="split-columns">
+    <div class="split-column --left" data-js="split-left">
+      <div class="split-column-content">
+        <h2>Playstation 5</h2>
+        <a href="#" class="link-button --ps5">Buy now</a>
+      </div>
+    </div>
+    <div class="split-column --right" data-js="split-right">
+      <div class="split-column-content">
+        <h2>XBox Series X</h2>
+        <a href="#" class="link-button --xbox">Buy now</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
