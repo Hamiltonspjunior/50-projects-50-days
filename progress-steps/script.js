@@ -19,7 +19,7 @@ const update = stepIndex => {
 	steps[stepIndex].classList.toggle('is-active')
 	progress.style.width = `${progressPercentage}%`
 
-	handleButtons()\
+	handleButtons()
 }
 
 prev.addEventListener('click', () => {
